@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.10)
+project(Bilder_Extrahieren)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(OpenCV REQUIRED)
+
+add_executable(tool src/main.cpp)
+
+set_target_properties(tool PROPERTIES OUTPUT_NAME "video_extractor"
+)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+target_include_directories(tool PRIVATE ${OpenCV_INCLUDE_DIRS})
+target_link_libraries(tool PRIVATE ${OpenCV_LIBS})
+
