@@ -1,1 +1,4 @@
-Inial Version.
+Opencv wird eingebunden und prozessiert
+
+OpenCV ist in "C:\opencv" eingebunden und wir daraus aufgerufen.
+Basis war der extrahierte inhalt von opencv-4.13.0-windows.exe 
